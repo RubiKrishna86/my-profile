@@ -1,48 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>My Profile</title>
-     <style>
+<head>
+    <title>Rubi's Profile</title>
+    <style>
         body {
             background-color: #1E40AF; /* performance blue */
-            color: white;              /* text visible on dark bg */
+            color: white;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-       h1 {
+        nav {
+            background: #0D47A1;
+            padding: 15px;
             text-align: center;
-            font-size: 40px;
         }
-        p {
-            font-style: italic;
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
         }
-       h2 {
+        section {
+            padding: 50px;
             text-align: center;
-            font-size: 40px;
         }
-        p {
-            font-style: italic;
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 60%;
         }
     </style>
-  </head>
-  <body>
-    <h1>Welcome to My Profile</h1>
-    <p>Hello! I am Rubi Krishna S.</p>
-  </body>
-</html>
-</body>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to My Profile</h1>
+        <p>Hello da, I am Rubi Krishna, Electrical Engineering student at SASTRA University.</p>
+    </section>
+
+  <!-- About Section -->
+<section id="about">
     <h2>About Me</h2>
-     <img src="myphoto.jpg" alt="My Photo" width="200">
-    <p>I am an Electrical Engineering student at SASTRA University, interested in Arduino and electronics projects.</p>
-    
-    <h2>Skills</h2>
-    <ul>
-        <li>Arduino Basics</li>
-        <li>VLSI Design</li>
-        <li>Electronics Projects</li>
-    </ul>
-    
-    <h2>Contact</h2>
-    <p>Mobile: 6379436375</p>
-    <p>Email: rubikrishna286@gmail.com</p>
+    <div class="card">
+        <!-- Profile Photo -->
+      #about img {
+    display: block;
+    margin: 0 auto 20px;
+    border: 4px solid white;
+}
+
+        <img src="myphoto.jpg" alt="Rubi Krishna" width="200" style="border-radius: 50%;">
+
+        <!-- College Info -->
+        <h3>SASTRA University</h3>
+        <p>2nd Year - Electrical Engineering (VLSI Design and Technology)</p>
+
+        <!-- Short Bio -->
+        <p>I am passionate about Arduino, electronics projects, and web development basics.</p>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+
+        <!-- Project 1 -->
+        <h3>Counting in 7-Segment Display</h3>
+        <img src="7segment.jpg" alt="7-Segment Project" width="300" style="border-radius:10px;">
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/mgm8k0ZuHPw" 
+                frameborder="0" allowfullscreen></iframe>
+        <p>Digital circuit project where numbers are displayed using a 7-segment display.</p>
+
+        <!-- Project 2 -->
+        <h3>Blinking with Transistor</h3>
+        <img src="transistor.jpg" alt="Transistor Project" width="300" style="border-radius:10px;">
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/-ycqiO7L6Sw" 
+                frameborder="0" allowfullscreen></iframe>
+        <p>Basic electronics project showing LED blinking controlled by a transistor.</p>
+
+        <!-- Project 3 -->
+        <h3>Potentiometer Behavior with LED</h3>
+        <img src="potentiometer.jpg" alt="Potentiometer Project" width="300" style="border-radius:10px;">
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/hrlns2Wa4-U" 
+                frameborder="0" allowfullscreen></iframe>
+        <p>Arduino project demonstrating how a potentiometer controls LED brightness using analog input and PWM output.</p>
+
+    </div>
+</section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="card">
+            <p>Arduino Basics, VLSI Design, HTML/CSS, Electronics Projects</p>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests">
+        <h2>Interested Areas</h2>
+        <div class="card">
+            <p>Artificial Intelligence, Web Development, Electronics, QR Code generation</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Info</h2>
+        <div class="card">
+            <p>Phone: 6379436375
+               Email: rubikrishna286@gmail.com<br>
+               GitHub: github.com/rubikrishna86<br>
+               LinkedIn: linkedin.com/in/rubikrishna</p>
+        </div>
+    </section>
+
 </body>
 </html>
