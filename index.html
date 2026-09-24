@@ -1,136 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-    <title>Rubi's Profile</title>
-    <style>
-        body {
-            background-color: #1E40AF; /* performance blue */
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background: #0D47A1;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 50px;
-            text-align: center;
-        }
-        h1, h2 {
-            margin-bottom: 20px;
-        }
-        .card {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 10px;
-            width: 60%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rubi Krishna | Electrical Engineering Student</title>
+  <meta name="description" content="Portfolio of Rubi Krishna, 2nd year Electrical Engineering (VLSI Design and Technology) student at SASTRA University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Rubi Krishna, home">RK</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme">
+        <span aria-hidden="true">☀</span>
+      </button>
     </nav>
+  </header>
 
-    <!-- Home Section -->
-    <section id="home">
-        <h1>Welcome to My Profile</h1>
-        <p>Hello da, I am Rubi Krishna, Electrical Engineering student at SASTRA University.</p>
+  <main id="main">
+    <!-- Home -->
+    <section id="home" class="hero">
+      <div class="wrap">
+        <p class="hero-hi">Hello, I am</p>
+        <h1 class="hero-name">Rubi Krishna</h1>
+        <svg class="trace" viewBox="0 0 400 24" aria-hidden="true" preserveAspectRatio="none">
+          <path d="M0 12 H150 L170 4 H230 L250 12 H380" />
+          <circle cx="388" cy="12" r="5" />
+        </svg>
+        <p class="hero-role">
+          Electrical Engineering student at SASTRA University, learning
+          <span id="typed" class="typed" data-words='["VLSI design","Arduino","electronics","web development"]'>VLSI design</span><span class="caret" aria-hidden="true"></span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See my projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
     </section>
 
-  <!-- About Section -->
-<section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <!-- Profile Photo -->
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <h2>About me</h2>
+        <div class="about panel">
+          <div class="avatar">
+            <img src="myphoto.jpg" alt="Portrait of Rubi Krishna" width="200" height="200">
+            <span class="avatar-fallback" aria-hidden="true">RK</span>
+          </div>
+          <div>
+            <h3>SASTRA University</h3>
+            <p class="muted">2nd Year, Electrical Engineering (VLSI Design and Technology)</p>
+            <p>I am passionate about Arduino, electronics projects, and web development basics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <img src="myphoto.jpg" alt="Rubi Krishna" width="200" style="border-radius: 50%;">
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="panel project">
+            <div class="video" data-video="mgm8k0ZuHPw" data-title="Counting in 7-Segment Display"></div>
+            <img class="shot" src="7segment.jpg" alt="7-segment display project" loading="lazy">
+            <h3>Counting in 7-Segment Display</h3>
+            <p>Digital circuit project where numbers are displayed using a 7-segment display.</p>
+          </article>
 
-        <!-- College Info -->
-        <h3>SASTRA University</h3>
-        <p>2nd Year - Electrical Engineering (VLSI Design and Technology)</p>
+          <article class="panel project">
+            <div class="video" data-video="-ycqiO7L6Sw" data-title="Blinking with Transistor"></div>
+            <img class="shot" src="transistor.jpg" alt="Transistor blinking LED project" loading="lazy">
+            <h3>Blinking with Transistor</h3>
+            <p>Basic electronics project showing LED blinking controlled by a transistor.</p>
+          </article>
 
-        <!-- Short Bio -->
-        <p>I am passionate about Arduino, electronics projects, and web development basics.</p>
-    </div>
-</section>
+          <article class="panel project">
+            <div class="video" data-video="hrlns2Wa4-U" data-title="Potentiometer Behavior with LED"></div>
+            <img class="shot" src="potentiometer.jpg" alt="Potentiometer and LED project" loading="lazy">
+            <h3>Potentiometer Behavior with LED</h3>
+            <p>Arduino project demonstrating how a potentiometer controls LED brightness using analog input and PWM output.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-
-    <!-- Projects Section -->
-    <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-
-        <!-- Project 1 -->
-        <h3>Counting in 7-Segment Display</h3>
-        <img src="7segment.jpg" alt="7-Segment Project" width="300" style="border-radius:10px;">
-        <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/mgm8k0ZuHPw" 
-                frameborder="0" allowfullscreen></iframe>
-        <p>Digital circuit project where numbers are displayed using a 7-segment display.</p>
-
-        <!-- Project 2 -->
-        <h3>Blinking with Transistor</h3>
-        <img src="transistor.jpg" alt="Transistor Project" width="300" style="border-radius:10px;">
-        <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/-ycqiO7L6Sw" 
-                frameborder="0" allowfullscreen></iframe>
-        <p>Basic electronics project showing LED blinking controlled by a transistor.</p>
-
-        <!-- Project 3 -->
-        <h3>Potentiometer Behavior with LED</h3>
-        <img src="potentiometer.jpg" alt="Potentiometer Project" width="300" style="border-radius:10px;">
-        <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/hrlns2Wa4-U" 
-                frameborder="0" allowfullscreen></iframe>
-        <p>Arduino project demonstrating how a potentiometer controls LED brightness using analog input and PWM output.</p>
-
-    </div>
-</section>
-
-    <!-- Skills Section -->
-    <section id="skills">
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="wrap">
         <h2>Skills</h2>
-        <div class="card">
-            <p>Arduino Basics, VLSI Design, HTML/CSS, Electronics Projects</p>
-        </div>
+        <ul class="chips panel">
+          <li>Arduino Basics</li>
+          <li>VLSI Design</li>
+          <li>HTML/CSS</li>
+          <li>Electronics Projects</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Interests Section -->
-    <section id="interests">
-        <h2>Interested Areas</h2>
-        <div class="card">
-            <p>Artificial Intelligence, Web Development, Electronics, QR Code generation</p>
-        </div>
+    <!-- Interests -->
+    <section id="interests" class="section">
+      <div class="wrap">
+        <h2>Interested areas</h2>
+        <ul class="chips panel">
+          <li>Artificial Intelligence</li>
+          <li>Web Development</li>
+          <li>Electronics</li>
+          <li>QR Code generation</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Info</h2>
-        <div class="card">
-            <p>Phone: 6379436375
-               Email: rubikrishna286@gmail.com<br>
-               GitHub: github.com/rubikrishna86<br>
-               LinkedIn: linkedin.com/in/rubikrishna</p>
-        </div>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <h2>Contact info</h2>
+        <ul class="contact panel">
+          <li><span class="label">Phone</span><a href="tel:+916379436375">6379436375</a></li>
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:rubikrishna286@gmail.com">rubikrishna286@gmail.com</a>
+            <button type="button" class="copy" data-copy="rubikrishna286@gmail.com">Copy email</button>
+          </li>
+          <li><span class="label">GitHub</span><a href="https://github.com/rubikrishna86" target="_blank" rel="noopener">github.com/rubikrishna86</a></li>
+          <li><span class="label">LinkedIn</span><a href="https://linkedin.com/in/rubikrishna" target="_blank" rel="noopener">linkedin.com/in/rubikrishna</a></li>
+        </ul>
+        <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
     </section>
+  </main>
 
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Rubi Krishna</p>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top" hidden>↑</button>
+  <script src="script.js"></script>
 </body>
 </html>
